@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:41:38 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/02 20:54:50 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/02 21:59:56 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,11 @@ int	main(int argc, char **argv)
 	t_stack *stack_a;
 	t_stack *stack_b;
 	
-	if (argc < 2)
+	if (argc <= 2)
 		return(0);
 	count = valid_digits(argc, argv);
 	numbers = convert_init(argc, argv, count);
+	is_sorted(numbers, count);
 	duplicate(numbers, count);
 	stack_a = process_stack(numbers, count);
 	stack_b = create_stack();

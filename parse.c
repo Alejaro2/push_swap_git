@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:41:21 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/02/28 18:39:06 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/02 22:03:05 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_error(char *str, int flag)
 	exit(flag);
 }
 
-int	is_sorted(int *numbers, int count)
+int is_sorted(int *numbers, int count)
 {
 	int	i;
 
@@ -27,10 +27,11 @@ int	is_sorted(int *numbers, int count)
 	while (i < (count - 1))
 	{
 		if (numbers[i] > numbers[i + 1])
-			return (0);
+			return(0);
 		i++;
 	}
-	return (1);
+	free(numbers);
+	exit(0);
 }
 
 int	is_all_spaces(char *str)
