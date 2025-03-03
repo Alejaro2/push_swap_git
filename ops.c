@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 16:24:51 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/02/26 18:33:58 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/03 11:37:32 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	reverse_rotate(t_stack *stack, char x, int b)
 	stack->top = temp;
 	if(b == 1)
 	{
-		write(1, "rr", 1);
+		write(1, "rr", 2);
 		write(1, &x, 1);
 		write(1, "\n", 1);
 	}

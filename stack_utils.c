@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.utils.c                                      :+:      :+:    :+:   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:20:20 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/02/28 13:23:55 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/03 11:29:13 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	simple_sort(t_stack *stack, int len)
 		swap(stack, 'a', 1);
 		if (is_stack_sorted(stack))
 			return ;
-		if (pos < len - pos)
+		else if(pos < len - pos)
 			rotate(stack, 'a', 1);
 		else
 			reverse_rotate(stack, 'a', 1);

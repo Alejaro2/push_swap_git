@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:41:38 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/02 21:59:56 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/03 11:47:24 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void init_stack_values(t_stack *stack, int *numbers, int count)
 	i = count - 1;
 	while (i >= 0)
 	{
-		lstadd(stack, numbers[i], i);
+		lstadd(stack, numbers[i], 0);
 		i--;
 	}
 }
