@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:20:20 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/03 11:29:13 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:09:49 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,7 @@ int	is_stack_sorted(t_stack *stack)
 	}
 	return (1);
 }
-void	sort(t_stack *a, t_stack *b, int len)
-{
-	if (is_stack_sorted(a))
-	{
-		free_stack(a);
-		free_stack(b);
-		exit(0);
-	}
-	if (len == 2)
-	{
-		if (a->top->value > a->top->next->value)
-			swap(a, 'a', 1);
-	}
-	else if (len == 3)
-		simple_sort(a, len);
-}
+
 int	is_rot_sort(t_stack *stack)
 {
 	int	a;

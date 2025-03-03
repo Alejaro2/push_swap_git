@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:41:38 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/03 11:47:24 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/03 13:09:34 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 void set_algorithm(t_stack *stack_a, t_stack *stack_b, int size)
 {
+	if (is_stack_sorted(stack_a))
+	{
+		free_stack(stack_a);
+		free_stack(stack_b);
+		exit(0);
+	}
 	if(size == 2)
 		swap(stack_a, 'a', 1);
 	else if(size == 3)
@@ -69,12 +75,12 @@ int	main(int argc, char **argv)
 	t_stack *stack_a;
 	t_stack *stack_b;
 	
-	if (argc <= 2)
+	if (argc < 2)
 		return(0);
 	count = valid_digits(argc, argv);
 	numbers = convert_init(argc, argv, count);
-	is_sorted(numbers, count);
 	duplicate(numbers, count);
+	is_sorted(numbers, count);
 	stack_a = process_stack(numbers, count);
 	stack_b = create_stack();
 	if(!stack_a || !stack_b)
