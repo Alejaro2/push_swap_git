@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 15:41:38 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/03 13:09:34 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:49:42 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void set_algorithm(t_stack *stack_a, t_stack *stack_b, int size)
 		exit(0);
 	}
 	if(size == 2)
-		swap(stack_a, 'a', 1);
+		swap(stack_a, 'a');
 	else if(size == 3)
 		simple_sort(stack_a, 3);
 	else if(size <= 7)

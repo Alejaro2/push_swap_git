@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 17:11:13 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/02/28 18:24:18 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:51:14 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,17 @@
 	{
 		if(a->top->s_index <= i)
 		{
-			push(a, b, 'b', 1);
+			push(a, b, 'b');
 			i++;
 		}
 		else if(a->top->s_index <= i + range)
 		{
-			push(a, b, 'b', 1);
-			rotate(b, 'b', 1);
+			push(a, b, 'b');
+			rotate(b, 'b');
 			i++;
 		}
 		else
-			rotate(a, 'a', 1);
+			rotate(a, 'a');
 	}
  }
  
@@ -60,13 +60,13 @@
 		if(count_index(b->top, len) <= b->size / 2)
 		{
 			while(b->top->s_index != len)
-				rotate(b, 'b', 1);
+				rotate(b, 'b');
 		}
 		else
 		{
 			while(b->top->s_index != len)
-				reverse_rotate(b, 'b', 1);
+				reverse_rotate(b, 'b');
 		}
-		push(b, a, 'a', 1);
+		push(b, a, 'a');
 	}
  }

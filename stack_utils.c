@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 14:20:20 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/03 13:09:49 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:50:27 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,19 +57,19 @@ void	simple_sort(t_stack *stack, int len)
 	if (is_rot_sort(stack))
 	{
 		if (pos < len - pos)
-			rotate(stack, 'a', 1);
+			rotate(stack, 'a');
 		else
-			reverse_rotate(stack, 'a', 1);
+			reverse_rotate(stack, 'a');
 	}
 	else
 	{
-		swap(stack, 'a', 1);
+		swap(stack, 'a');
 		if (is_stack_sorted(stack))
 			return ;
 		else if(pos < len - pos)
-			rotate(stack, 'a', 1);
+			rotate(stack, 'a');
 		else
-			reverse_rotate(stack, 'a', 1);
+			reverse_rotate(stack, 'a');
 	}
 }
 void insertion_sort(t_stack *a, t_stack *b, int len)
@@ -84,13 +84,13 @@ void insertion_sort(t_stack *a, t_stack *b, int len)
 		while (a->top->s_index != min)
 		{
 			if(count_index(a->top, min) <= a->size / 2)
-				rotate(a, 'a', 1);
+				rotate(a, 'a');
 			else
-				reverse_rotate(a, 'a', 1);
+				reverse_rotate(a, 'a');
 		}
-		push(a, b, 'b', 1);
+		push(a, b, 'b');
 	}
 	simple_sort(a, 3);
 	while(b->size > 0)
-		push(b, a, 'a', 1);
+		push(b, a, 'a');
 }

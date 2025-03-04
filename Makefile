@@ -6,7 +6,7 @@
 #    By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/13 16:31:47 by alejaro2          #+#    #+#              #
-#    Updated: 2025/02/28 18:25:35 by alejaro2         ###   ########.fr        #
+#    Updated: 2025/03/04 15:08:49 by alejaro2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ parse_convert.c \
 parse.c validate.c \
 stack_utils.c \
 utils.c sort_utils.c \
-ops_1.c ops.c ksort.c \
+ops.c ksort.c \
 
 
 OBJS = $(SRC:.c=.o)

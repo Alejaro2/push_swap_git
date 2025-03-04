@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 16:31:30 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/02 21:58:40 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 17:48:37 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ int is_sorted(int *numbers, int count);
 void ft_free_mem(char **array);
 int *save_mem(int count);
 void free_stack(t_stack *stack);
-void print_stack(t_stack *stack);
-
 
 void convert_numbers(char **split, int *numbers, int *new);
 int *convert_init(int argc, char **argv, int count);
@@ -52,10 +50,10 @@ int *convert_init(int argc, char **argv, int count);
 void ft_error(char *str, int flag);
 int is_all_spaces(char *str);
 
-void	reverse_rotate(t_stack *stack, char x, int b);
-void	rotate(t_stack *stack, char x, int b);
-void	push(t_stack *src, t_stack *dst, char x, int b);
-void	swap(t_stack *stack, char x, int b);
+void	reverse_rotate(t_stack *stack, char x);
+void	rotate(t_stack *stack, char x);
+void	push(t_stack *src, t_stack *dst, char x);
+void	swap(t_stack *stack, char x);
 
 t_node *create_node(int value, int index);
 t_stack *create_stack(void);
@@ -69,7 +67,6 @@ int count_index(t_node *node, int index);
 void insertion_sort(t_stack *a, t_stack *b, int len);
 void	simple_sort(t_stack *stack, int len);
 int	is_rot_sort(t_stack *stack);
-void	sort(t_stack *a, t_stack *b, int len);
 int	is_stack_sorted(t_stack *stack);
 void k_sort2(t_stack *a, t_stack *b, int len);
 void k_sort1(t_stack *a, t_stack *b, int len);
