@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:41:21 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/02 22:03:05 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 10:02:02 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,24 @@ int	is_all_spaces(char *str)
 	return (1);
 }
 
+void	duplicate(int *numbers, int count)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < (count - 1))
+	{
+		j = i + 1;
+		while (j < count)
+		{
+			if (numbers[i] == numbers[j])
+			{
+				free(numbers);
+				ft_error("Error\n", 1);
+			}
+			j++;
+		}
+		i++;
+	}
+}

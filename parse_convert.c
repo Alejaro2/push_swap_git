@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:34:48 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/03/03 12:58:42 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 10:02:14 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,25 +81,5 @@ int	*convert_init(int argc, char **argv, int count)
 	return (numbers);
 }
 
-void	duplicate(int *numbers, int count)
-{
-	int	i;
-	int	j;
 
-	i = 0;
-	while (i < (count - 1))
-	{
-		j = i + 1;
-		while (j < count)
-		{
-			if (numbers[i] == numbers[j])
-			{
-				free(numbers);
-				ft_error("Error\n", 1);
-			}
-			j++;
-		}
-		i++;
-	}
-}
 

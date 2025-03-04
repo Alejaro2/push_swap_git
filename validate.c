@@ -6,7 +6,7 @@
 /*   By: alejaro2 <alejaro2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 10:01:50 by alejaro2          #+#    #+#             */
-/*   Updated: 2025/02/23 20:38:36 by alejaro2         ###   ########.fr       */
+/*   Updated: 2025/03/04 10:22:29 by alejaro2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,14 @@ int	valid_limits(char *str)
 		i++;
 		while (str[i] == '0')
 			i++;
-		if ((len - i) > 10 || ((len - i) == 10 && ft_strncmp(str + i,
-					"2147483648", 10) > 0))
+		if ((len - i) > 10 || ((len - i) == 10 && ft_strncmp(str + i, "2147483648", 10) > 0))
 			return (0);
 	}
 	else
 	{
 		while (str[i] == '0')
 			i++;
-		if ((len - i) > 10 || ((len - i) == 10 && ft_strncmp(str + i,
-					"2147483647", 10) > 0))
+		if ((len - i) > 10 || ((len - i) == 10 && ft_strncmp(str + i, "2147483647", 10) > 0))
 			return (0);
 	}
 	return (1);
